@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:examen_p2/src/routes/routes.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,15 +9,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Examen Parcial 2'),
-        ),
-        body: Center(
-          child: Container(
-            child: Text('Ready to comply'),
-          ),
-        ),
+      initialRoute: '/',
+      routes: getApplicationRoutes(),
+      theme: ThemeData(
+        primaryColor: Colors.yellow[900],
+        accentColor: Colors.yellow,
       ),
     );
   }
